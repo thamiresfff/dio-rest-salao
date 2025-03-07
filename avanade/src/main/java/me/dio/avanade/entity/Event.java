@@ -21,7 +21,7 @@ public class Event {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="client_id", nullable = false)
+    @JoinColumn(name="client_id", nullable = false)
     @ManyToOne
     private Client client;
 

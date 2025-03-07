@@ -21,7 +21,7 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "cliente",cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "client",cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Event> events;
 
     @Column(name="name", nullable = false)
