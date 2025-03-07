@@ -26,7 +26,7 @@ public class Event {
     private Client client;
 
     @Column(name="date_time", unique = true)
-    private LocalDateTime Date;
+    private LocalDateTime date;
 
     @Column(name="type_event",nullable = false)
     private EventType eventType;
