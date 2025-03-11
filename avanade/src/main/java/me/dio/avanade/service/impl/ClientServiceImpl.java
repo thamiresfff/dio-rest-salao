@@ -32,5 +32,9 @@ public class ClientServiceImpl implements ClientService {
                 clientRepository.findByCpf(cpf)
                         .orElseThrow(()-> new ClientNotFoundException("Cliente não encontrado ")));
     }
-
+    public Client findOrCreateClient(ClientDTO clientDTO){
+        return clientRepository.findByCpf(clientDTO.cpf())
+                .orElseGet(() -> clientRepository.save(
+                                clientMapper.toEntity(clientDTO)));
+    }
 }

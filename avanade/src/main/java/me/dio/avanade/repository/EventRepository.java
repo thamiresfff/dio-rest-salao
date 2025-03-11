@@ -4,10 +4,10 @@ import me.dio.avanade.entity.Event;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 
 @Repository
 public interface EventRepository extends JpaRepository<Event,Long> {
-    boolean existsByDate(LocalDateTime data);
+    boolean existsByDate(LocalDate data);
 }

@@ -7,5 +7,5 @@ public interface ClientService {
 
     Client saveClient (ClientDTO client);
     ClientDTO find(String cpf);
-
+    Client findOrCreateClient(ClientDTO clientDTO);
 }
