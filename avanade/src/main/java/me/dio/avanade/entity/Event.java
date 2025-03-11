@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import me.dio.avanade.enums.EventType;
 import me.dio.avanade.enums.PaymentStatus;
-import org.springframework.boot.autoconfigure.web.WebProperties;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity(name="tb_event")
 @Getter
@@ -25,8 +24,8 @@ public class Event {
     @ManyToOne
     private Client client;
 
-    @Column(name="date_time", unique = true)
-    private LocalDateTime date;
+    @Column(name="date", unique = true)
+    private LocalDate date;
 
     @Column(name="type_event",nullable = false)
     private EventType eventType;
