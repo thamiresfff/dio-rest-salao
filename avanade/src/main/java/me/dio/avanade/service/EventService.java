@@ -5,4 +5,5 @@ import me.dio.avanade.entity.Event;
 
 public interface EventService{
     Event saveEvent (EventDTO event);
+    EventDTO findEvent (String date);
 }
