@@ -12,4 +12,11 @@ public class ApplicationAdvice {
     public ResponseEntity<String> handlerClientNotFoundException (ClientNotFoundException e){
         return ResponseEntity.status(404).body(e.getMessage());
     }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<String> handlerIllegalArgumentException (IllegalArgumentException e){
+        return ResponseEntity.status(400).body(e.getMessage());
+    }
+
 }
+
