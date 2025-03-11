@@ -19,8 +19,12 @@ public class ClientServiceImpl implements ClientService {
     private final ClientMapper clientMapper;
 
     public Client saveClient (ClientDTO clientRequest){
-        Client client = clientMapper.toEntity(clientRequest);
-        return clientRepository.save(client);
+
+        if(clientRepository.existsByCpf(clientRequest.cpf()))
+            throw new IllegalArgumentException("cliente ja cadastrado");
+
+        return clientRepository.save(
+                clientMapper.toEntity(clientRequest));
     }
 
     public ClientDTO find(String cpf){
@@ -28,4 +32,5 @@ public class ClientServiceImpl implements ClientService {
                 clientRepository.findByCpf(cpf)
                         .orElseThrow(()-> new ClientNotFoundException("Cliente não encontrado ")));
     }
+
 }
