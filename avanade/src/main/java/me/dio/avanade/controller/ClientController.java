@@ -4,10 +4,7 @@ import lombok.RequiredArgsConstructor;
 import me.dio.avanade.dto.ClientDTO;
 import me.dio.avanade.service.ClientService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
@@ -18,9 +15,14 @@ public class ClientController {
     private final ClientService clientService;
 
     @PostMapping
-    public ResponseEntity<String> created (@RequestBody ClientDTO clientRequest){
+    public ResponseEntity<String> create(@RequestBody ClientDTO clientRequest) {
+        clientService.saveClient(clientRequest);
         return ResponseEntity.status(201)
                 .body("CLiente cadastrado com sucesso");
     }
-}
 
+    @GetMapping
+    public ResponseEntity<Object> find(@RequestParam String cpf) {
+        return ResponseEntity.status(200).body(clientService.find(cpf));
+    }
+}
