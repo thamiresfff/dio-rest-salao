@@ -29,7 +29,9 @@ Para consultar um cliente existente, envie uma requisição `GET` para /client c
 /client?cpf=55443433
 
 Eventos
+
 Cadastro de Evento
+
 Para cadastrar um novo evento, envie uma requisição `POST` para /event com o seguinte corpo JSON:
 
 ```json
