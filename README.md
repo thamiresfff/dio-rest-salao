@@ -23,6 +23,7 @@ Para cadastrar um novo cliente, envie uma requisição `POST` para `/client` com
 }
 ```
 Consulta de Cliente
+
 Para consultar um cliente existente, envie uma requisição `GET` para /client com o parâmetro cpf:
 
 /client?cpf=55443433
