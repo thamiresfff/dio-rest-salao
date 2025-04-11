@@ -1,19 +1,21 @@
-# API de Cadastro de Clientes e Eventos para Salão de Festas
+Aqui está o seu texto formatado em **Markdown** para ser utilizado no README do GitHub:
 
-Esta API permite o cadastro e consulta de clientes e eventos para um salão de festas.
+```markdown
+# 🎊 API de Cadastro de Clientes e Eventos para Salão de Festas
 
-## Endpoint
+Esta API permite o cadastro e consulta de **clientes** e **eventos** para um salão de festas.
 
+## 🌐 Endpoint
 A API está disponível no seguinte endpoint:
 
-https://dio-rest-salao-production.up.railway.app/
+🔗 **[https://dio-rest-salao-production.up.railway.app/](https://dio-rest-salao-production.up.railway.app/)**
 
+---
 
-## Clientes
+## 🧑‍🤝‍🧑 Clientes
 
-### Cadastro de Cliente
-
-Para cadastrar um novo cliente, envie uma requisição `POST` para `/client` com o seguinte corpo JSON:
+### 📝 Cadastro de Cliente
+Para cadastrar um novo cliente, envie uma requisição **POST** para `/client` com o seguinte corpo JSON:
 
 ```json
 {
@@ -22,20 +24,22 @@ Para cadastrar um novo cliente, envie uma requisição `POST` para `/client` com
     "phone": "5555555"
 }
 ```
-Consulta de Cliente
 
-Para consultar um cliente existente, envie uma requisição `GET` para /client com o parâmetro cpf:
+### 🔎 Consulta de Cliente
+Para consultar um cliente existente, envie uma requisição **GET** para `/client` com o parâmetro `cpf`:
 
+```plaintext
 /client?cpf=55443433
+```
 
-Eventos
+---
 
-Cadastro de Evento
+## 🎈 Eventos
 
-Para cadastrar um novo evento, envie uma requisição `POST` para /event com o seguinte corpo JSON:
+### 🎯 Cadastro de Evento
+Para cadastrar um novo evento, envie uma requisição **POST** para `/event` com o seguinte corpo JSON:
 
 ```json
-
 {
     "client": {
         "name": "John Doe",
@@ -47,7 +51,17 @@ Para cadastrar um novo evento, envie uma requisição `POST` para /event com o s
     "paymentStatus": "PAID"
 }
 ```
-Consulta de Evento por data
-Para consultar eventos por data, envie uma requisição `GET` para /event com o parâmetro date:
 
+### 📆 Consulta de Evento por Data
+Para consultar eventos por data, envie uma requisição **GET** para `/event` com o parâmetro `date`:
+
+```plaintext
 /event?date=27/10/2025
+```
+
+---
+
+✨ Agora, basta copiar e colar este conteúdo no arquivo `README.md` do seu repositório no GitHub! Se precisar de ajustes, me avise. 🚀😊
+```
+
+Isso deve deixar seu README mais organizado e visualmente agradável! Se precisar de mais personalização, só me chamar. 🚀🎉
